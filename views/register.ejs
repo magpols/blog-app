@@ -1,0 +1,22 @@
+<%- include('partials/top'); -%>
+
+    <div class="container mt-5">
+        <h1>Register</h1>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label class="form-label" for="username">Username</label>
+                <input class="form-control" type="text" name="username" placeholder="Enter Username">  
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" name="password" placeholder="Enter Password">  
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+            <button class="btn btn-secondary" type="button" href="/">Cancel</button>
+        </form>
+        <p class="lead mt-4">
+            Have An Account? <a href="login">Login</a>
+        </p>
+    </div>
+
+<%- include('partials/bottom'); -%>

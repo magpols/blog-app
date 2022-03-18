@@ -1,0 +1,21 @@
+<%- include('partials/top'); -%>
+
+<div class="container">
+	<h1>Edit</h1>
+	<form action="/edit" method="post">
+		<input type="hidden" name="postId" value="<%= id %>"></input>
+        <div class="form-group">
+            <h4>Post ID: <%= id %></h4><br>
+            <label class="form-label">New Title</label>
+            <input class="form-control title" type="text" name="title" value="<%= title %>">
+            <label class="form-label">Date</label>
+			<input class="form-control" type="date" name="currentDate" value="<%= new Date() %>"/><br>
+            <label class="form-label">New Content</label>
+            <textarea class="form-control" name="postBody" rows="10" value="<%= content %>"></textarea>
+        </div>
+        <button class="btn btn-dark btn-md">Update</button>
+        <button class="btn btn-secondary" type="button" href="/admin">Cancel</button>
+	</form>
+</div>
+
+<%- include('partials/bottom'); -%>

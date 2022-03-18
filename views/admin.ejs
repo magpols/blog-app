@@ -1,0 +1,30 @@
+<%- include('partials/top'); -%>
+
+    <div class="container">
+        <% posts.forEach(post => { %>
+            <div class="post-control">
+                <h1><%= post.title %></h1>
+                <p>Post ID: <%= post._id %></p>
+                <p>Date: <%= post.date %></p>
+                <hr>
+                <p><%= post.content %></p>
+                <div class="btn-group">
+                    <div class="container">
+                        <form action="/delete/<%= post._id %>" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                    <div class="container">
+                        <form action="/edit/<%= post._id %>" method="get">
+                            <button type="submit" class="btn btn-primary" name="edit">Edit</button>
+                        </form>  
+                    </div>
+                </div>   
+            </div>
+        <% }) %>
+        <a href="compose">Compose</a>
+        <a href="logout">Logout</a>
+    </div>
+
+    
+<%- include('partials/bottom'); -%>

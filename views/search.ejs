@@ -1,0 +1,12 @@
+<%- include('partials/top'); -%>
+
+<div class="container">
+	<h1>Search Post(s)</h1>
+	<h4><%= msg %></h4>
+	<% result.forEach(post => { %>
+	<h3><%= post.title %></h3>
+    <p><%= post.content %></p>
+    <% }) %>
+</div>
+
+<%- include('partials/bottom'); -%>

@@ -1,0 +1,39 @@
+<%- include('partials/top'); -%>
+
+<div class="container">
+	<h1>Compose</h1>
+	<form action="/compose" method="post">
+		<div class="form-group">
+			<label class="form-label">Title</label>
+			<input
+				class="form-control"
+				type="text"
+				name="postTitle"
+				required
+			/><br >
+			<label class="form-label">Date</label>
+			<input class="form-control" type="date" name="currentDate" value="<%= new Date().getFullYear(); %>" default/><br>
+			<label class="form-label">Content</label>
+			<textarea
+				class="form-control"
+				name="postBody"
+				id="postBody"
+				rows="10"
+				required
+			></textarea
+			><br>
+            <!-- <label class="form-label">Keywords</label>
+			<input
+				class="form-control"
+				type="text"
+				name="postKeyword"
+				required
+			/><br > -->
+			<button class="btn btn-dark btn-md" type="submit">Publish</button>
+		</div>
+	</form>
+	<a href="admin">Admin Page</a>
+	<a href="logout">Logout</a>
+</div>
+
+<%- include('partials/bottom'); -%>

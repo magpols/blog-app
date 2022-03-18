@@ -1,0 +1,31 @@
+<%- include('partials/top'); -%>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <div class="container">
+            <h5><%= contactContent %></h5>
+            <form action="" method="post">
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" placeholder="Your Name" name="sender_name">
+                </div>
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" placeholder="Your Email" name="sender_email">
+                </div>
+                <div class="form-group mb-2">
+                    <textarea class="form-control" cols="25" rows="4" placeholder="Message" name="sender_message"></textarea>
+                </div>
+                <div class="form-group mb-2">
+                    <input type="submit" class="btn btn-secondary" value="Send Message">
+                </div>
+                <br><br>
+            <h5>or check out my social media:</h5>
+            <br>
+            <div class="container-social-media">
+                <a href="https://github.com/magpols" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+                <a href="https://linkedin.com/in/shannonpolan" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+                <a href="https://twitter.com/shannonpolan" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+            </div>
+        </div>
+        
+    </div>
+
+<%- include('partials/bottom'); -%>
